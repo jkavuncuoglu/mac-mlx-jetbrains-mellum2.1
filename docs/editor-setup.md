@@ -80,16 +80,23 @@ Notes:
 
 ### JetBrains (IntelliJ, PhpStorm, WebStorm, PyCharm, and others)
 
-1. Install the **Continue** plugin from Settings > Plugins > Marketplace, then restart the IDE.
+1. Install the **Continue** plugin, then restart the IDE. Either:
+   - **From the IDE:** Settings > Plugins > Marketplace, search for "Continue". It may not show up in the in-app search for every IDE or version; if you cannot find it, use the next option.
+   - **From disk:** open the [Continue plugin page on the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/22707-continue), download the plugin file for your IDE version from the Versions tab, then in the IDE go to Settings > Plugins > gear icon > **Install Plugin from Disk...** and select the downloaded `.zip`.
 2. Edit `~/.continue/config.yaml` as above. The plugin reloads it automatically; use the gear icon in the Continue panel to open it.
 3. Pick **Mellum 2.1 (Local)** in the model dropdown in the Continue panel.
 4. Use chat in the side panel, or select code and use the edit shortcut to rewrite it in place.
 
 ### VS Code
 
-1. Install the **Continue** extension from the Extensions view.
-2. Edit the same `~/.continue/config.yaml`.
-3. Pick **Mellum 2.1 (Local)** in the model dropdown and use the side panel and edit shortcuts the same way.
+1. Install the **Continue** extension. Any one of:
+   - **From the editor:** open the Extensions view (`Cmd+Shift+X` on macOS, `Ctrl+Shift+X` elsewhere), search for "Continue", and install the one published by Continue.
+   - **From the command line:** `code --install-extension Continue.continue`. The `code` command is available after running "Shell Command: Install 'code' command in PATH" from the Command Palette.
+   - **From the web:** the [Continue extension on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Continue.continue) has an Install button that opens VS Code. If you use VSCodium or another editor that cannot reach Microsoft's marketplace, install it from [Open VSX](https://open-vsx.org/extension/Continue/continue).
+   - **From a file:** download the `.vsix` from either page, then in the Extensions view use the `...` menu > **Install from VSIX...**.
+2. Open the Continue panel from its icon in the sidebar. Continue's default placement is the left side; dragging it to the secondary (right) sidebar keeps it next to your editor.
+3. Edit the same `~/.continue/config.yaml` as above. In the panel, the gear icon opens it, and it reloads when you save.
+4. Pick **Mellum 2.1 (Local)** in the model dropdown. Chat from the side panel, or select code and use the edit shortcut (`Cmd+I` on macOS, `Ctrl+I` elsewhere) to rewrite it in place.
 
 If other chat models (for example an Ollama model) are also in the config, make sure the dropdown is on Mellum, otherwise requests go to the other model and never reach this server.
 

@@ -5,6 +5,8 @@ Runs two models locally on an Apple Silicon Mac behind one FastAPI server on `12
 - **JetBrains Mellum 2.1** (12B-A2.5B MoE, 6-bit MLX) for chat, edit, and apply
 - **google/embeddinggemma-2** (768-dim) for codebase indexing
 
+For background on the model, see JetBrains' announcement: [Mellum2.1 Gets to Work: A Fast Open Model for Coding Agents](https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/).
+
 It exposes OpenAI-compatible routes, so any editor or tool that can talk to an OpenAI-style endpoint can use it. See [docs/editor-setup.md](docs/editor-setup.md) for VS Code, JetBrains, and CLI usage (Continue is the recommended client).
 
 Requires an Apple Silicon Mac (MLX is Apple-only) and roughly 12 GB of free unified memory for both models.
